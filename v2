@@ -1,0 +1,42 @@
+--Giver script (Made for Wacky)
+-- Insert this script into the brick that holds all the tools ^_^
+--NOT THE TOOLS The Brick with ALL the tools inside!
+
+s=script.Parent
+on=false
+wait(math.random(1,5))
+if game.Lighting:FindFirstChild("ToolPack")==nil then
+local tp=Instance.new("Model")
+tp.Name="ToolPack"
+tp.Parent=game.Lighting
+end
+tp=game.Lighting:FindFirstChild("ToolPack")
+local t=s:GetChildren()
+for i=1,#t do
+if tp.className=="Tool" or tp.className=="HopperBin" then
+	t[i].Parent=tp
+end end
+
+function findmatch(name)
+local p=game.Players:GetChildren()
+for f=1,#p do
+if p[f].Name==name then
+return p[f]
+end end
+return nil end
+
+
+function give(hit)
+if hit==nil or hit.Parent==nil or on then return end
+local player=findmatch(hit.Parent.Name)
+if player==nil then return end
+on=true
+local t=tp:GetChildren()
+for i=1,#t do
+	t[i]:clone().Parent=player.Backpack
+end
+wait(2)
+on=false
+end
+
+s.Touched:connect(give)
