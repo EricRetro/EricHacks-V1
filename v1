@@ -1,0 +1,1704 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local MyGUI = Instance.new("ScreenGui")
+local Time = Instance.new("TextButton")
+local Day = Instance.new("TextButton")
+local Night = Instance.new("TextButton")
+local Cancel = Instance.new("TextButton")
+local Walkspeed = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local Done = Instance.new("TextButton")
+local Default = Instance.new("TextLabel")
+local Cancel_2 = Instance.new("TextButton")
+local Name = Instance.new("TextButton")
+local Jump = Instance.new("TextButton")
+local TextBox_2 = Instance.new("TextBox")
+local Done_2 = Instance.new("TextButton")
+local Default_2 = Instance.new("TextLabel")
+local Cancel_3 = Instance.new("TextButton")
+local HideTopbar = Instance.new("TextButton")
+local Line = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Shutdown = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local Yes = Instance.new("TextButton")
+local No = Instance.new("TextButton")
+local Gravity = Instance.new("TextButton")
+local TextBox_3 = Instance.new("TextBox")
+local Done_3 = Instance.new("TextButton")
+local Default_3 = Instance.new("TextLabel")
+local Cancel_4 = Instance.new("TextButton")
+local Player = Instance.new("TextButton")
+local Reset = Instance.new("TextButton")
+local TextBox_4 = Instance.new("TextBox")
+local Done_4 = Instance.new("TextButton")
+local Cancel_5 = Instance.new("TextButton")
+local Noclip = Instance.new("TextButton")
+local Music = Instance.new("TextButton")
+local TextBox_5 = Instance.new("TextBox")
+local Done_5 = Instance.new("TextButton")
+local Volume = Instance.new("TextBox")
+local Cancel_6 = Instance.new("TextButton")
+local Invisible = Instance.new("TextButton")
+local Message = Instance.new("TextButton")
+local TextBox_6 = Instance.new("TextBox")
+local Done_6 = Instance.new("TextButton")
+local Cancel_7 = Instance.new("TextButton")
+local Color = Instance.new("TextButton")
+local Color_2 = Instance.new("TextButton")
+local Color_3 = Instance.new("TextButton")
+local Color_4 = Instance.new("TextButton")
+local HidePanel = Instance.new("TextButton")
+local Kick = Instance.new("TextButton")
+local TextBox_7 = Instance.new("TextBox")
+local Kick_2 = Instance.new("TextButton")
+local Cancel_8 = Instance.new("TextButton")
+local Nuke = Instance.new("TextButton")
+local Kill = Instance.new("TextButton")
+local TextBox_8 = Instance.new("TextBox")
+local Kill_2 = Instance.new("TextButton")
+local Cancel_9 = Instance.new("TextButton")
+local God = Instance.new("TextButton")
+
+--Properties:
+
+MyGUI.Name = "MyGUI"
+MyGUI.Parent = game.Workspace.Open me
+
+Time.Name = "Time"
+Time.Parent = MyGUI
+Time.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Time.BackgroundTransparency = 0.500
+Time.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Time.BorderSizePixel = 4
+Time.Position = UDim2.new(0, 19, 0, 690)
+Time.Size = UDim2.new(0, 200, 0, 25)
+Time.Font = Enum.Font.Arcade
+Time.Text = "Time"
+Time.TextColor3 = Color3.fromRGB(255, 0, 0)
+Time.TextSize = 32.000
+Time.TextStrokeTransparency = 0.500
+Time.TextWrapped = true
+
+Day.Name = "Day"
+Day.Parent = Time
+Day.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Day.BackgroundTransparency = 0.500
+Day.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Day.BorderSizePixel = 3
+Day.Position = UDim2.new(0, 220, 0, 3)
+Day.Size = UDim2.new(0, 90, 0, 20)
+Day.Visible = false
+Day.Font = Enum.Font.Arcade
+Day.Text = "Day"
+Day.TextColor3 = Color3.fromRGB(255, 0, 0)
+Day.TextSize = 24.000
+Day.TextStrokeTransparency = 0.500
+Day.TextWrapped = true
+
+Night.Name = "Night"
+Night.Parent = Time
+Night.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Night.BackgroundTransparency = 0.500
+Night.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Night.BorderSizePixel = 3
+Night.Position = UDim2.new(0, 320, 0, 3)
+Night.Size = UDim2.new(0, 90, 0, 20)
+Night.Visible = false
+Night.Font = Enum.Font.Arcade
+Night.Text = "Night"
+Night.TextColor3 = Color3.fromRGB(255, 0, 0)
+Night.TextSize = 24.000
+Night.TextStrokeTransparency = 0.500
+Night.TextWrapped = true
+
+Cancel.Name = "Cancel"
+Cancel.Parent = Time
+Cancel.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Cancel.BackgroundTransparency = 0.500
+Cancel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cancel.BorderSizePixel = 3
+Cancel.Position = UDim2.new(0, 420, 0, 3)
+Cancel.Size = UDim2.new(0, 90, 0, 20)
+Cancel.Visible = false
+Cancel.Font = Enum.Font.Arcade
+Cancel.Text = "Cancel"
+Cancel.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cancel.TextSize = 24.000
+Cancel.TextStrokeTransparency = 0.500
+Cancel.TextWrapped = true
+
+Walkspeed.Name = "Walkspeed"
+Walkspeed.Parent = MyGUI
+Walkspeed.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Walkspeed.BackgroundTransparency = 0.500
+Walkspeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Walkspeed.BorderSizePixel = 4
+Walkspeed.Position = UDim2.new(0, 19, 0, 330)
+Walkspeed.Size = UDim2.new(0, 200, 0, 25)
+Walkspeed.Font = Enum.Font.Arcade
+Walkspeed.Text = "Walk Speed"
+Walkspeed.TextColor3 = Color3.fromRGB(255, 0, 0)
+Walkspeed.TextSize = 28.000
+Walkspeed.TextStrokeTransparency = 0.500
+Walkspeed.TextWrapped = true
+
+TextBox.Parent = Walkspeed
+TextBox.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+TextBox.BackgroundTransparency = 0.500
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 3
+TextBox.Position = UDim2.new(0, 230, 0, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 30)
+TextBox.Visible = false
+TextBox.Font = Enum.Font.Arcade
+TextBox.Text = "Enter WalkSpeed"
+TextBox.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox.TextScaled = true
+TextBox.TextSize = 18.000
+TextBox.TextStrokeTransparency = 0.500
+TextBox.TextWrapped = true
+
+Done.Name = "Done"
+Done.Parent = TextBox
+Done.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Done.BackgroundTransparency = 0.500
+Done.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Done.BorderSizePixel = 3
+Done.Position = UDim2.new(0, 0, 0, 50)
+Done.Size = UDim2.new(0, 90, 0, 20)
+Done.Font = Enum.Font.Arcade
+Done.Text = "Done"
+Done.TextColor3 = Color3.fromRGB(255, 0, 0)
+Done.TextSize = 24.000
+Done.TextStrokeTransparency = 0.500
+Done.TextWrapped = true
+
+Default.Name = "Default"
+Default.Parent = TextBox
+Default.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Default.BackgroundTransparency = 1.000
+Default.Position = UDim2.new(0, 200, 0, 0)
+Default.Size = UDim2.new(0, 100, 0, 30)
+Default.Font = Enum.Font.SourceSans
+Default.Text = "Default = 16"
+Default.TextColor3 = Color3.fromRGB(255, 255, 255)
+Default.TextSize = 14.000
+Default.TextStrokeTransparency = 0.500
+
+Cancel_2.Name = "Cancel"
+Cancel_2.Parent = TextBox
+Cancel_2.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Cancel_2.BackgroundTransparency = 0.500
+Cancel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cancel_2.BorderSizePixel = 3
+Cancel_2.Position = UDim2.new(0, 110, 0, 50)
+Cancel_2.Size = UDim2.new(0, 90, 0, 20)
+Cancel_2.Font = Enum.Font.Arcade
+Cancel_2.Text = "Cancel"
+Cancel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cancel_2.TextSize = 24.000
+Cancel_2.TextStrokeTransparency = 0.500
+Cancel_2.TextWrapped = true
+
+Name.Name = "Name"
+Name.Parent = MyGUI
+Name.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Name.BackgroundTransparency = 0.500
+Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderSizePixel = 4
+Name.Position = UDim2.new(0, 19, 0, 450)
+Name.Size = UDim2.new(0, 200, 0, 25)
+Name.Font = Enum.Font.Arcade
+Name.Text = "Hide Name"
+Name.TextColor3 = Color3.fromRGB(255, 0, 0)
+Name.TextSize = 32.000
+Name.TextStrokeTransparency = 0.500
+Name.TextWrapped = true
+
+Jump.Name = "Jump"
+Jump.Parent = MyGUI
+Jump.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Jump.BackgroundTransparency = 0.500
+Jump.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Jump.BorderSizePixel = 4
+Jump.Position = UDim2.new(0, 19, 0, 370)
+Jump.Size = UDim2.new(0, 200, 0, 25)
+Jump.Font = Enum.Font.Arcade
+Jump.Text = "Jump Power"
+Jump.TextColor3 = Color3.fromRGB(255, 0, 0)
+Jump.TextSize = 28.000
+Jump.TextStrokeTransparency = 0.500
+Jump.TextWrapped = true
+
+TextBox_2.Parent = Jump
+TextBox_2.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+TextBox_2.BackgroundTransparency = 0.500
+TextBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.BorderSizePixel = 3
+TextBox_2.Position = UDim2.new(0, 230, 0, 0)
+TextBox_2.Size = UDim2.new(0, 200, 0, 30)
+TextBox_2.Visible = false
+TextBox_2.Font = Enum.Font.Arcade
+TextBox_2.Text = "Enter JumpPower"
+TextBox_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_2.TextScaled = true
+TextBox_2.TextSize = 18.000
+TextBox_2.TextStrokeTransparency = 0.500
+TextBox_2.TextWrapped = true
+
+Done_2.Name = "Done"
+Done_2.Parent = TextBox_2
+Done_2.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Done_2.BackgroundTransparency = 0.500
+Done_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Done_2.BorderSizePixel = 3
+Done_2.Position = UDim2.new(0, 0, 0, 50)
+Done_2.Size = UDim2.new(0, 90, 0, 20)
+Done_2.Font = Enum.Font.Arcade
+Done_2.Text = "Done"
+Done_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+Done_2.TextSize = 24.000
+Done_2.TextStrokeTransparency = 0.500
+Done_2.TextWrapped = true
+
+Default_2.Name = "Default"
+Default_2.Parent = TextBox_2
+Default_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Default_2.BackgroundTransparency = 1.000
+Default_2.Position = UDim2.new(0, 200, 0, 0)
+Default_2.Size = UDim2.new(0, 100, 0, 30)
+Default_2.Font = Enum.Font.SourceSans
+Default_2.Text = "Default = 50"
+Default_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Default_2.TextSize = 14.000
+Default_2.TextStrokeTransparency = 0.500
+
+Cancel_3.Name = "Cancel"
+Cancel_3.Parent = TextBox_2
+Cancel_3.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Cancel_3.BackgroundTransparency = 0.500
+Cancel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cancel_3.BorderSizePixel = 3
+Cancel_3.Position = UDim2.new(0, 110, 0, 50)
+Cancel_3.Size = UDim2.new(0, 90, 0, 20)
+Cancel_3.Font = Enum.Font.Arcade
+Cancel_3.Text = "Cancel"
+Cancel_3.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cancel_3.TextSize = 24.000
+Cancel_3.TextStrokeTransparency = 0.500
+Cancel_3.TextWrapped = true
+
+HideTopbar.Name = "Hide Topbar"
+HideTopbar.Parent = MyGUI
+HideTopbar.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+HideTopbar.BackgroundTransparency = 0.500
+HideTopbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HideTopbar.BorderSizePixel = 4
+HideTopbar.Position = UDim2.new(0, 19, 0, 730)
+HideTopbar.Size = UDim2.new(0, 200, 0, 25)
+HideTopbar.Font = Enum.Font.Arcade
+HideTopbar.Text = "Hide Topbar"
+HideTopbar.TextColor3 = Color3.fromRGB(255, 0, 0)
+HideTopbar.TextSize = 30.000
+HideTopbar.TextStrokeTransparency = 0.500
+HideTopbar.TextWrapped = true
+
+Line.Name = "Line"
+Line.Parent = MyGUI
+Line.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Line.BorderSizePixel = 0
+Line.Position = UDim2.new(0, 0, 0.0399999991, 0)
+Line.Size = UDim2.new(0, 250, 0, 1)
+
+TextLabel.Parent = Line
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 43, 0, -40)
+TextLabel.Size = UDim2.new(0, 150, 0, 40)
+TextLabel.Font = Enum.Font.Arcade
+TextLabel.Text = "Admin GUI"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeTransparency = 0.500
+TextLabel.TextWrapped = true
+
+Shutdown.Name = "Shutdown"
+Shutdown.Parent = MyGUI
+Shutdown.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Shutdown.BackgroundTransparency = 0.500
+Shutdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Shutdown.BorderSizePixel = 4
+Shutdown.Position = UDim2.new(0, 19, 0, 130)
+Shutdown.Size = UDim2.new(0, 200, 0, 25)
+Shutdown.Font = Enum.Font.Arcade
+Shutdown.Text = "Shutdown"
+Shutdown.TextColor3 = Color3.fromRGB(255, 0, 0)
+Shutdown.TextSize = 28.000
+Shutdown.TextStrokeTransparency = 0.500
+Shutdown.TextWrapped = true
+
+TextLabel_2.Parent = Shutdown
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+TextLabel_2.BackgroundTransparency = 0.500
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 3
+TextLabel_2.Position = UDim2.new(0, 230, 0, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_2.Visible = false
+TextLabel_2.Font = Enum.Font.Arcade
+TextLabel_2.Text = "Are you sure?"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextStrokeTransparency = 0.500
+TextLabel_2.TextWrapped = true
+
+Yes.Name = "Yes"
+Yes.Parent = TextLabel_2
+Yes.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Yes.BackgroundTransparency = 0.500
+Yes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Yes.BorderSizePixel = 3
+Yes.Position = UDim2.new(0, 0, 0, 70)
+Yes.Size = UDim2.new(0, 95, 0, 20)
+Yes.Font = Enum.Font.Arcade
+Yes.Text = "Yes"
+Yes.TextColor3 = Color3.fromRGB(255, 0, 0)
+Yes.TextSize = 24.000
+Yes.TextStrokeTransparency = 0.500
+Yes.TextWrapped = true
+
+No.Name = "No"
+No.Parent = TextLabel_2
+No.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+No.BackgroundTransparency = 0.500
+No.BorderColor3 = Color3.fromRGB(0, 0, 0)
+No.BorderSizePixel = 3
+No.Position = UDim2.new(0, 105, 0, 70)
+No.Size = UDim2.new(0, 95, 0, 20)
+No.Font = Enum.Font.Arcade
+No.Text = "No"
+No.TextColor3 = Color3.fromRGB(255, 0, 0)
+No.TextSize = 24.000
+No.TextStrokeTransparency = 0.500
+No.TextWrapped = true
+
+Gravity.Name = "Gravity"
+Gravity.Parent = MyGUI
+Gravity.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Gravity.BackgroundTransparency = 0.500
+Gravity.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gravity.BorderSizePixel = 4
+Gravity.Position = UDim2.new(0, 19, 0, 90)
+Gravity.Size = UDim2.new(0, 200, 0, 25)
+Gravity.Font = Enum.Font.Arcade
+Gravity.Text = "Gravity"
+Gravity.TextColor3 = Color3.fromRGB(255, 0, 0)
+Gravity.TextSize = 28.000
+Gravity.TextStrokeTransparency = 0.500
+Gravity.TextWrapped = true
+
+TextBox_3.Parent = Gravity
+TextBox_3.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+TextBox_3.BackgroundTransparency = 0.500
+TextBox_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_3.BorderSizePixel = 3
+TextBox_3.Position = UDim2.new(0, 230, 0, 0)
+TextBox_3.Size = UDim2.new(0, 200, 0, 30)
+TextBox_3.Visible = false
+TextBox_3.Font = Enum.Font.Arcade
+TextBox_3.Text = "Enter Gravity"
+TextBox_3.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_3.TextScaled = true
+TextBox_3.TextSize = 18.000
+TextBox_3.TextStrokeTransparency = 0.500
+TextBox_3.TextWrapped = true
+
+Done_3.Name = "Done"
+Done_3.Parent = TextBox_3
+Done_3.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Done_3.BackgroundTransparency = 0.500
+Done_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Done_3.BorderSizePixel = 3
+Done_3.Position = UDim2.new(0, 0, 0, 50)
+Done_3.Size = UDim2.new(0, 90, 0, 20)
+Done_3.Font = Enum.Font.Arcade
+Done_3.Text = "Done"
+Done_3.TextColor3 = Color3.fromRGB(255, 0, 0)
+Done_3.TextSize = 24.000
+Done_3.TextStrokeTransparency = 0.500
+Done_3.TextWrapped = true
+
+Default_3.Name = "Default"
+Default_3.Parent = TextBox_3
+Default_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Default_3.BackgroundTransparency = 1.000
+Default_3.Position = UDim2.new(0, 200, 0, 0)
+Default_3.Size = UDim2.new(0, 100, 0, 30)
+Default_3.Font = Enum.Font.SourceSans
+Default_3.Text = "Default = 196.2"
+Default_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Default_3.TextSize = 14.000
+Default_3.TextStrokeTransparency = 0.500
+
+Cancel_4.Name = "Cancel"
+Cancel_4.Parent = TextBox_3
+Cancel_4.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Cancel_4.BackgroundTransparency = 0.500
+Cancel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cancel_4.BorderSizePixel = 3
+Cancel_4.Position = UDim2.new(0, 110, 0, 50)
+Cancel_4.Size = UDim2.new(0, 90, 0, 20)
+Cancel_4.Font = Enum.Font.Arcade
+Cancel_4.Text = "Cancel"
+Cancel_4.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cancel_4.TextSize = 24.000
+Cancel_4.TextStrokeTransparency = 0.500
+Cancel_4.TextWrapped = true
+
+Player.Name = "Player"
+Player.Parent = MyGUI
+Player.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Player.BackgroundTransparency = 0.500
+Player.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Player.BorderSizePixel = 4
+Player.Position = UDim2.new(0, 19, 0, 50)
+Player.Size = UDim2.new(0, 200, 0, 25)
+Player.Font = Enum.Font.Arcade
+Player.Text = "Character"
+Player.TextColor3 = Color3.fromRGB(255, 0, 0)
+Player.TextSize = 28.000
+Player.TextStrokeTransparency = 0.500
+Player.TextWrapped = true
+
+Reset.Name = "Reset"
+Reset.Parent = Player
+Reset.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Reset.BackgroundTransparency = 0.500
+Reset.BorderSizePixel = 6
+Reset.Position = UDim2.new(0, 45, 0, 70)
+Reset.Size = UDim2.new(0, 100, 0, 25)
+Reset.Visible = false
+Reset.Font = Enum.Font.Arcade
+Reset.Text = "Restore"
+Reset.TextColor3 = Color3.fromRGB(255, 0, 0)
+Reset.TextScaled = true
+Reset.TextSize = 14.000
+Reset.TextStrokeTransparency = 0.500
+Reset.TextWrapped = true
+
+TextBox_4.Parent = Player
+TextBox_4.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+TextBox_4.BackgroundTransparency = 0.500
+TextBox_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_4.BorderSizePixel = 3
+TextBox_4.Position = UDim2.new(0, 230, 0, 0)
+TextBox_4.Size = UDim2.new(0, 200, 0, 30)
+TextBox_4.Visible = false
+TextBox_4.Font = Enum.Font.Arcade
+TextBox_4.Text = "Enter player ID"
+TextBox_4.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_4.TextScaled = true
+TextBox_4.TextSize = 18.000
+TextBox_4.TextStrokeTransparency = 0.500
+TextBox_4.TextWrapped = true
+
+Done_4.Name = "Done"
+Done_4.Parent = TextBox_4
+Done_4.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Done_4.BackgroundTransparency = 0.500
+Done_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Done_4.BorderSizePixel = 3
+Done_4.Position = UDim2.new(0, 0, 0, 50)
+Done_4.Size = UDim2.new(0, 90, 0, 20)
+Done_4.Font = Enum.Font.Arcade
+Done_4.Text = "Done"
+Done_4.TextColor3 = Color3.fromRGB(255, 0, 0)
+Done_4.TextSize = 24.000
+Done_4.TextStrokeTransparency = 0.500
+Done_4.TextWrapped = true
+
+Cancel_5.Name = "Cancel"
+Cancel_5.Parent = TextBox_4
+Cancel_5.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Cancel_5.BackgroundTransparency = 0.500
+Cancel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cancel_5.BorderSizePixel = 3
+Cancel_5.Position = UDim2.new(0, 110, 0, 50)
+Cancel_5.Size = UDim2.new(0, 90, 0, 20)
+Cancel_5.Font = Enum.Font.Arcade
+Cancel_5.Text = "Cancel"
+Cancel_5.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cancel_5.TextSize = 24.000
+Cancel_5.TextStrokeTransparency = 0.500
+Cancel_5.TextWrapped = true
+
+Noclip.Name = "Noclip"
+Noclip.Parent = MyGUI
+Noclip.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Noclip.BackgroundTransparency = 0.500
+Noclip.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Noclip.BorderSizePixel = 4
+Noclip.Position = UDim2.new(0, 19, 0, 290)
+Noclip.Size = UDim2.new(0, 200, 0, 25)
+Noclip.Font = Enum.Font.Arcade
+Noclip.Text = "Ignore Walls"
+Noclip.TextColor3 = Color3.fromRGB(255, 0, 0)
+Noclip.TextSize = 28.000
+Noclip.TextStrokeTransparency = 0.500
+Noclip.TextWrapped = true
+
+Music.Name = "Music"
+Music.Parent = MyGUI
+Music.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Music.BackgroundTransparency = 0.500
+Music.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Music.BorderSizePixel = 4
+Music.Position = UDim2.new(0, 19, 0, 210)
+Music.Size = UDim2.new(0, 200, 0, 25)
+Music.Font = Enum.Font.Arcade
+Music.Text = "Music"
+Music.TextColor3 = Color3.fromRGB(255, 0, 0)
+Music.TextSize = 28.000
+Music.TextStrokeTransparency = 0.500
+Music.TextWrapped = true
+
+TextBox_5.Parent = Music
+TextBox_5.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+TextBox_5.BackgroundTransparency = 0.500
+TextBox_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_5.BorderSizePixel = 3
+TextBox_5.Position = UDim2.new(0, 250, 0, 0)
+TextBox_5.Size = UDim2.new(0, 200, 0, 30)
+TextBox_5.Visible = false
+TextBox_5.Font = Enum.Font.Arcade
+TextBox_5.Text = "Enter audio ID"
+TextBox_5.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_5.TextScaled = true
+TextBox_5.TextSize = 18.000
+TextBox_5.TextStrokeTransparency = 0.500
+TextBox_5.TextWrapped = true
+
+Done_5.Name = "Done"
+Done_5.Parent = TextBox_5
+Done_5.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Done_5.BackgroundTransparency = 0.500
+Done_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Done_5.BorderSizePixel = 3
+Done_5.Position = UDim2.new(0, 0, 0, 100)
+Done_5.Size = UDim2.new(0, 90, 0, 20)
+Done_5.Font = Enum.Font.Arcade
+Done_5.Text = "Play"
+Done_5.TextColor3 = Color3.fromRGB(255, 0, 0)
+Done_5.TextSize = 24.000
+Done_5.TextStrokeTransparency = 0.500
+Done_5.TextWrapped = true
+
+Volume.Name = "Volume"
+Volume.Parent = TextBox_5
+Volume.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+Volume.BackgroundTransparency = 0.500
+Volume.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Volume.BorderSizePixel = 3
+Volume.Position = UDim2.new(0, 0, 0, 50)
+Volume.Size = UDim2.new(0, 200, 0, 30)
+Volume.Font = Enum.Font.Arcade
+Volume.Text = "Enter Volume"
+Volume.TextColor3 = Color3.fromRGB(255, 0, 0)
+Volume.TextSize = 26.000
+Volume.TextStrokeTransparency = 0.500
+Volume.TextWrapped = true
+
+Cancel_6.Name = "Cancel"
+Cancel_6.Parent = TextBox_5
+Cancel_6.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Cancel_6.BackgroundTransparency = 0.500
+Cancel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cancel_6.BorderSizePixel = 3
+Cancel_6.Position = UDim2.new(0, 110, 0, 100)
+Cancel_6.Size = UDim2.new(0, 90, 0, 20)
+Cancel_6.Font = Enum.Font.Arcade
+Cancel_6.Text = "Cancel"
+Cancel_6.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cancel_6.TextSize = 24.000
+Cancel_6.TextStrokeTransparency = 0.500
+Cancel_6.TextWrapped = true
+
+Invisible.Name = "Invisible"
+Invisible.Parent = MyGUI
+Invisible.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Invisible.BackgroundTransparency = 0.500
+Invisible.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Invisible.BorderSizePixel = 4
+Invisible.Position = UDim2.new(0, 19, 0, 250)
+Invisible.Size = UDim2.new(0, 200, 0, 25)
+Invisible.Font = Enum.Font.Arcade
+Invisible.Text = "Invisible"
+Invisible.TextColor3 = Color3.fromRGB(255, 0, 0)
+Invisible.TextSize = 28.000
+Invisible.TextStrokeTransparency = 0.500
+Invisible.TextWrapped = true
+
+Message.Name = "Message"
+Message.Parent = MyGUI
+Message.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Message.BackgroundTransparency = 0.500
+Message.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Message.BorderSizePixel = 4
+Message.Position = UDim2.new(0, 19, 0, 170)
+Message.Size = UDim2.new(0, 200, 0, 25)
+Message.Font = Enum.Font.Arcade
+Message.Text = "Message"
+Message.TextColor3 = Color3.fromRGB(255, 0, 0)
+Message.TextSize = 28.000
+Message.TextStrokeTransparency = 0.500
+Message.TextWrapped = true
+
+TextBox_6.Parent = Message
+TextBox_6.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+TextBox_6.BackgroundTransparency = 0.500
+TextBox_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_6.BorderSizePixel = 3
+TextBox_6.Position = UDim2.new(0, 250, 0, 0)
+TextBox_6.Size = UDim2.new(0, 200, 0, 30)
+TextBox_6.Visible = false
+TextBox_6.Font = Enum.Font.Arcade
+TextBox_6.Text = "Enter Message"
+TextBox_6.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_6.TextScaled = true
+TextBox_6.TextSize = 18.000
+TextBox_6.TextStrokeTransparency = 0.500
+TextBox_6.TextWrapped = true
+
+Done_6.Name = "Done"
+Done_6.Parent = TextBox_6
+Done_6.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Done_6.BackgroundTransparency = 0.500
+Done_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Done_6.BorderSizePixel = 3
+Done_6.Position = UDim2.new(0, 0, 0, 40)
+Done_6.Size = UDim2.new(0, 90, 0, 20)
+Done_6.Font = Enum.Font.Arcade
+Done_6.Text = "Create"
+Done_6.TextColor3 = Color3.fromRGB(255, 0, 0)
+Done_6.TextSize = 24.000
+Done_6.TextStrokeTransparency = 0.500
+Done_6.TextWrapped = true
+
+Cancel_7.Name = "Cancel"
+Cancel_7.Parent = TextBox_6
+Cancel_7.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Cancel_7.BackgroundTransparency = 0.500
+Cancel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cancel_7.BorderSizePixel = 3
+Cancel_7.Position = UDim2.new(0, 110, 0, 40)
+Cancel_7.Size = UDim2.new(0, 90, 0, 20)
+Cancel_7.Font = Enum.Font.Arcade
+Cancel_7.Text = "Cancel"
+Cancel_7.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cancel_7.TextSize = 24.000
+Cancel_7.TextStrokeTransparency = 0.500
+Cancel_7.TextWrapped = true
+
+Color.Name = "Color"
+Color.Parent = TextBox_6
+Color.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Color.BorderSizePixel = 3
+Color.Position = UDim2.new(0, 5, 0, 70)
+Color.Size = UDim2.new(0, 35, 0, 35)
+Color.Font = Enum.Font.SourceSans
+Color.Text = ""
+Color.TextSize = 14.000
+
+Color_2.Name = "Color"
+Color_2.Parent = TextBox_6
+Color_2.BackgroundColor3 = Color3.fromRGB(231, 0, 3)
+Color_2.BorderSizePixel = 3
+Color_2.Position = UDim2.new(0, 55, 0, 70)
+Color_2.Size = UDim2.new(0, 35, 0, 35)
+Color_2.Font = Enum.Font.SourceSans
+Color_2.Text = ""
+Color_2.TextSize = 14.000
+
+Color_3.Name = "Color"
+Color_3.Parent = TextBox_6
+Color_3.BackgroundColor3 = Color3.fromRGB(0, 150, 231)
+Color_3.BorderSizePixel = 3
+Color_3.Position = UDim2.new(0, 105, 0, 70)
+Color_3.Size = UDim2.new(0, 35, 0, 35)
+Color_3.Font = Enum.Font.SourceSans
+Color_3.Text = ""
+Color_3.TextSize = 14.000
+
+Color_4.Name = "Color"
+Color_4.Parent = TextBox_6
+Color_4.BackgroundColor3 = Color3.fromRGB(97, 223, 0)
+Color_4.BorderSizePixel = 3
+Color_4.Position = UDim2.new(0, 155, 0, 70)
+Color_4.Size = UDim2.new(0, 35, 0, 35)
+Color_4.Font = Enum.Font.SourceSans
+Color_4.Text = ""
+Color_4.TextSize = 14.000
+
+HidePanel.Name = "Hide Panel"
+HidePanel.Parent = MyGUI
+HidePanel.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+HidePanel.BackgroundTransparency = 0.500
+HidePanel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HidePanel.BorderSizePixel = 4
+HidePanel.Position = UDim2.new(0, 19, 0, 770)
+HidePanel.Size = UDim2.new(0, 200, 0, 25)
+HidePanel.Font = Enum.Font.Arcade
+HidePanel.Text = "Hide Panel"
+HidePanel.TextColor3 = Color3.fromRGB(255, 0, 0)
+HidePanel.TextSize = 30.000
+HidePanel.TextStrokeTransparency = 0.500
+HidePanel.TextWrapped = true
+
+Kick.Name = "Kick"
+Kick.Parent = MyGUI
+Kick.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Kick.BackgroundTransparency = 0.500
+Kick.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Kick.BorderSizePixel = 4
+Kick.Position = UDim2.new(0, 19, 0, 530)
+Kick.Size = UDim2.new(0, 200, 0, 25)
+Kick.Font = Enum.Font.Arcade
+Kick.Text = "Kick Player"
+Kick.TextColor3 = Color3.fromRGB(255, 0, 0)
+Kick.TextSize = 28.000
+Kick.TextStrokeTransparency = 0.500
+Kick.TextWrapped = true
+
+TextBox_7.Parent = Kick
+TextBox_7.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+TextBox_7.BackgroundTransparency = 0.500
+TextBox_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_7.BorderSizePixel = 3
+TextBox_7.Position = UDim2.new(0, 230, 0, 0)
+TextBox_7.Size = UDim2.new(0, 200, 0, 30)
+TextBox_7.Visible = false
+TextBox_7.Font = Enum.Font.Arcade
+TextBox_7.Text = "Enter Player Name"
+TextBox_7.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_7.TextScaled = true
+TextBox_7.TextSize = 18.000
+TextBox_7.TextStrokeTransparency = 0.500
+TextBox_7.TextWrapped = true
+
+Kick_2.Name = "Kick"
+Kick_2.Parent = TextBox_7
+Kick_2.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Kick_2.BackgroundTransparency = 0.500
+Kick_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Kick_2.BorderSizePixel = 3
+Kick_2.Position = UDim2.new(0, 0, 0, 50)
+Kick_2.Size = UDim2.new(0, 90, 0, 20)
+Kick_2.Font = Enum.Font.Arcade
+Kick_2.Text = "Kick"
+Kick_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+Kick_2.TextSize = 24.000
+Kick_2.TextStrokeTransparency = 0.500
+Kick_2.TextWrapped = true
+
+Cancel_8.Name = "Cancel"
+Cancel_8.Parent = TextBox_7
+Cancel_8.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Cancel_8.BackgroundTransparency = 0.500
+Cancel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cancel_8.BorderSizePixel = 3
+Cancel_8.Position = UDim2.new(0, 110, 0, 50)
+Cancel_8.Size = UDim2.new(0, 90, 0, 20)
+Cancel_8.Font = Enum.Font.Arcade
+Cancel_8.Text = "Cancel"
+Cancel_8.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cancel_8.TextSize = 24.000
+Cancel_8.TextStrokeTransparency = 0.500
+Cancel_8.TextWrapped = true
+
+Nuke.Name = "Nuke"
+Nuke.Parent = MyGUI
+Nuke.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Nuke.BackgroundTransparency = 0.500
+Nuke.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Nuke.BorderSizePixel = 4
+Nuke.Position = UDim2.new(0, 20, 0, 490)
+Nuke.Size = UDim2.new(0, 200, 0, 25)
+Nuke.Font = Enum.Font.Arcade
+Nuke.Text = "Nuke"
+Nuke.TextColor3 = Color3.fromRGB(255, 0, 0)
+Nuke.TextSize = 28.000
+Nuke.TextStrokeTransparency = 0.500
+Nuke.TextWrapped = true
+
+Kill.Name = "Kill"
+Kill.Parent = MyGUI
+Kill.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+Kill.BackgroundTransparency = 0.500
+Kill.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Kill.BorderSizePixel = 4
+Kill.Position = UDim2.new(0, 19, 0, 570)
+Kill.Size = UDim2.new(0, 200, 0, 25)
+Kill.Font = Enum.Font.Arcade
+Kill.Text = "Kill Player"
+Kill.TextColor3 = Color3.fromRGB(255, 0, 0)
+Kill.TextSize = 28.000
+Kill.TextStrokeTransparency = 0.500
+Kill.TextWrapped = true
+
+TextBox_8.Parent = Kill
+TextBox_8.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+TextBox_8.BackgroundTransparency = 0.500
+TextBox_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_8.BorderSizePixel = 3
+TextBox_8.Position = UDim2.new(0, 230, 0, 0)
+TextBox_8.Size = UDim2.new(0, 200, 0, 30)
+TextBox_8.Visible = false
+TextBox_8.Font = Enum.Font.Arcade
+TextBox_8.Text = "Enter Player Name"
+TextBox_8.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_8.TextScaled = true
+TextBox_8.TextSize = 18.000
+TextBox_8.TextStrokeTransparency = 0.500
+TextBox_8.TextWrapped = true
+
+Kill_2.Name = "Kill"
+Kill_2.Parent = TextBox_8
+Kill_2.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Kill_2.BackgroundTransparency = 0.500
+Kill_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Kill_2.BorderSizePixel = 3
+Kill_2.Position = UDim2.new(0, 0, 0, 50)
+Kill_2.Size = UDim2.new(0, 90, 0, 20)
+Kill_2.Font = Enum.Font.Arcade
+Kill_2.Text = "Kill"
+Kill_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+Kill_2.TextSize = 24.000
+Kill_2.TextStrokeTransparency = 0.500
+Kill_2.TextWrapped = true
+
+Cancel_9.Name = "Cancel"
+Cancel_9.Parent = TextBox_8
+Cancel_9.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Cancel_9.BackgroundTransparency = 0.500
+Cancel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cancel_9.BorderSizePixel = 3
+Cancel_9.Position = UDim2.new(0, 110, 0, 50)
+Cancel_9.Size = UDim2.new(0, 90, 0, 20)
+Cancel_9.Font = Enum.Font.Arcade
+Cancel_9.Text = "Cancel"
+Cancel_9.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cancel_9.TextSize = 24.000
+Cancel_9.TextStrokeTransparency = 0.500
+Cancel_9.TextWrapped = true
+
+God.Name = "God"
+God.Parent = MyGUI
+God.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+God.BackgroundTransparency = 0.500
+God.BorderColor3 = Color3.fromRGB(0, 0, 0)
+God.BorderSizePixel = 4
+God.Position = UDim2.new(0, 19, 0, 410)
+God.Size = UDim2.new(0, 200, 0, 25)
+God.Font = Enum.Font.Arcade
+God.Text = "God Mode"
+God.TextColor3 = Color3.fromRGB(255, 0, 0)
+God.TextSize = 32.000
+God.TextStrokeTransparency = 0.500
+God.TextWrapped = true
+
+-- Scripts:
+
+local function ADWOXES_fake_script() -- Time.LocalScript 
+	local script = Instance.new('LocalScript', Time)
+
+	function onClicked()
+		script.Parent.Sound.Playing = true
+	    script.Parent.Day.Visible = true
+	    script.Parent.Night.Visible = true
+	    script.Parent.Cancel.Visible = true
+	script.Disabled = true
+	
+			end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(ADWOXES_fake_script)()
+local function UGLCF_fake_script() -- Day.LocalScript 
+	local script = Instance.new('LocalScript', Day)
+
+	function onClicked()
+		script.Parent.Parent.Night.Visible = false
+		script.Parent.Parent.Cancel.Visible = false
+		script.Parent.Visible = false
+		script.Parent.Parent.Sound.Playing = true
+		script.Parent.Parent.Sound:Play()
+		script.Parent.Parent.LocalScript.Disabled = false
+		game.Lighting.TimeOfDay = "14:00:00"
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(UGLCF_fake_script)()
+local function EPCXT_fake_script() -- Night.LocalScript 
+	local script = Instance.new('LocalScript', Night)
+
+	function onClicked()
+		script.Parent.Visible = false
+		script.Parent.Parent.Sound.Playing = true
+		script.Parent.Parent.Cancel.Visible = false
+		script.Parent.Parent.Day.Visible = false
+		script.Parent.Parent.Sound:Play()
+		script.Parent.Parent.LocalScript.Disabled = false
+		game.Lighting.TimeOfDay = "1:00:00"
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(EPCXT_fake_script)()
+local function HJCKE_fake_script() -- Cancel.LocalScript 
+	local script = Instance.new('LocalScript', Cancel)
+
+	function onClicked()
+		script.Parent.Visible = false
+		script.Parent.Parent.Sound.Playing = true
+		script.Parent.Parent.Day.Visible = false
+		script.Parent.Parent.Night.Visible = false
+		script.Parent.Parent.Sound:Play()
+		script.Parent.Parent.LocalScript.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(HJCKE_fake_script)()
+local function JMKI_fake_script() -- MyGUI.I SAID SECRET! 
+	local script = Instance.new('Script', MyGUI)
+
+	while true do
+		if script.Parent.Parent.Parent.Parent.Parent.Parent.Name == "GoldenDoge106" then
+			script.Parent.Parent = game.Players.Killersoldier45.PlayerGui
+	    end
+		wait()
+		script:remove()
+		wait()
+	end
+	
+end
+coroutine.wrap(JMKI_fake_script)()
+local function MENBM_fake_script() -- nil.Fix 
+	local script = Instance.new('Script', nil)
+
+	while true do
+		script.Parent.Disabled = true
+		wait()
+		script.Parent.Disabled = false
+		wait()
+	end
+	
+end
+coroutine.wrap(MENBM_fake_script)()
+local function GYDHISX_fake_script() -- Done.LocalScript 
+	local script = Instance.new('LocalScript', Done)
+
+	function onClicked()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.LocalScript2.Disabled = false
+		script.Parent.Parent.Parent.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+		script.Parent.Parent.Parent.Parent.Parent.Parent.Character.Humanoid.WalkSpeed = script.Parent.Parent.Text
+		script.Parent.Parent.Parent.Sound:Play()
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(GYDHISX_fake_script)()
+local function GYOVBMP_fake_script() -- Cancel_2.LocalScript 
+	local script = Instance.new('LocalScript', Cancel_2)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+	    script.Parent.Parent.Visible = false
+	    script.Parent.Parent.Parent.LocalScript.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(GYOVBMP_fake_script)()
+local function ECQGD_fake_script() -- Walkspeed.LocalScript 
+	local script = Instance.new('LocalScript', Walkspeed)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.TextBox.Visible = true
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(ECQGD_fake_script)()
+-- Walkspeed.LocalScript2 is disabled.
+local function WYSD_fake_script() -- Name.LocalScript 
+	local script = Instance.new('LocalScript', Name)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.LocalScript2.Disabled = false
+		script.Parent.Sound:Play()
+	    script.Parent.Parent.Parent.Parent.Character.Humanoid.DisplayDistanceType = "None"
+	    script.Parent.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(WYSD_fake_script)()
+-- Name.LocalScript2 is disabled.
+local function RHBPXH_fake_script() -- Jump.LocalScript 
+	local script = Instance.new('LocalScript', Jump)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.TextBox.Visible = true
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(RHBPXH_fake_script)()
+local function LMCGHZ_fake_script() -- Done_2.LocalScript 
+	local script = Instance.new('LocalScript', Done_2)
+
+	function onClicked()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.LocalScript2.Disabled = false
+		script.Parent.Parent.Parent.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+		script.Parent.Parent.Parent.Parent.Parent.Parent.Character.Humanoid.JumpPower = script.Parent.Parent.Text
+		script.Parent.Parent.Parent.Sound:Play()
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(LMCGHZ_fake_script)()
+local function FUXICE_fake_script() -- Cancel_3.LocalScript 
+	local script = Instance.new('LocalScript', Cancel_3)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+	    script.Parent.Parent.Visible = false
+	    script.Parent.Parent.Parent.LocalScript.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(FUXICE_fake_script)()
+-- Jump.LocalScript2 is disabled.
+local function UJAU_fake_script() -- HideTopbar.LocalScript 
+	local script = Instance.new('LocalScript', HideTopbar)
+
+	function onClicked()
+		script.Parent.Sound.Playing = true
+	    game.StarterGui:SetCore("TopbarEnabled", false)
+	    script.Parent.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+	    script.Disabled = true
+	    script.Parent.LocalScript2.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(UJAU_fake_script)()
+-- HideTopbar.LocalScript2 is disabled.
+local function WBPP_fake_script() -- Shutdown.LocalScript 
+	local script = Instance.new('LocalScript', Shutdown)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.TextLabel.Visible = true
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(WBPP_fake_script)()
+local function CULNW_fake_script() -- Yes.LocalScript 
+	local script = Instance.new('LocalScript', Yes)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+		wait()
+		game.Players:ClearAllChildren()
+		game.Workspace:ClearAllChildren()
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(CULNW_fake_script)()
+local function KZGV_fake_script() -- No.LocalScript 
+	local script = Instance.new('LocalScript', No)
+
+	function onClicked()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.LocalScript.Disabled = false
+		script.Parent.Parent.Parent.Sound:Play()
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(KZGV_fake_script)()
+local function ONLXIM_fake_script() -- Done_3.LocalScript 
+	local script = Instance.new('LocalScript', Done_3)
+
+	function onClicked()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.LocalScript2.Disabled = false
+		script.Parent.Parent.Parent.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+		game.Workspace.Gravity = script.Parent.Parent.Text
+		script.Parent.Parent.Parent.Sound:Play()
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(ONLXIM_fake_script)()
+local function BAOX_fake_script() -- Cancel_4.LocalScript 
+	local script = Instance.new('LocalScript', Cancel_4)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.LocalScript.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(BAOX_fake_script)()
+local function PCABBO_fake_script() -- Gravity.LocalScript 
+	local script = Instance.new('LocalScript', Gravity)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.TextBox.Visible = true
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(PCABBO_fake_script)()
+-- Gravity.LocalScript2 is disabled.
+local function WOUMJ_fake_script() -- Reset.LocalScript 
+	local script = Instance.new('LocalScript', Reset)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Parent.Parent.Character.Humanoid.Health = 0
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(WOUMJ_fake_script)()
+local function JZBN_fake_script() -- Player.LocalScript 
+	local script = Instance.new('LocalScript', Player)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.TextBox.Visible = true
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(JZBN_fake_script)()
+local function XXCLC_fake_script() -- Done_4.LocalScript 
+	local script = Instance.new('LocalScript', Done_4)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Parent.Parent.Parent.CharacterAppearanceId = script.Parent.Parent.Text
+		script.Parent.Script.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(XXCLC_fake_script)()
+-- Done_4.Script is disabled.
+local function XYRWN_fake_script() -- Cancel_5.LocalScript 
+	local script = Instance.new('LocalScript', Cancel_5)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound.Playing = true
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.LocalScript.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(XYRWN_fake_script)()
+local function MMYP_fake_script() -- Noclip.LocalScript 
+	local script = Instance.new('LocalScript', Noclip)
+
+	function onClicked()
+		script.Parent.Sound:Play()
+		script.Parent.LocalScript2.Disabled = false
+		script.Disabled = true
+	
+	-----------------------------------------------------------------------
+	script.Parent.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+	script.Parent.NoClip.Disabled = false
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(MMYP_fake_script)()
+-- Noclip.NoClip is disabled.
+-- Noclip.LocalScript2 is disabled.
+local function KNEBBHL_fake_script() -- Music.LocalScript 
+	local script = Instance.new('LocalScript', Music)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.TextBox.Visible = true
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(KNEBBHL_fake_script)()
+local function LOZFJ_fake_script() -- Done_5.LocalScript 
+	local script = Instance.new('LocalScript', Done_5)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+		S = Instance.new("Sound")
+		S.Volume = script.Parent.Parent.Volume.Text
+		S.Looped = false
+		S.Playing = true
+		S.SoundId = "rbxassetid://"..script.Parent.Parent.Text
+		S.Parent = game.Workspace
+		R = script.Script:Clone()
+		R.Parent = S
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.LocalScript.Disabled = false
+		wait(0.5)
+		R.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(LOZFJ_fake_script)()
+-- nil.Script is disabled.
+local function IPVTJ_fake_script() -- Cancel_6.LocalScript 
+	local script = Instance.new('LocalScript', Cancel_6)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+	    script.Parent.Parent.Visible = false
+	    script.Parent.Parent.Parent.LocalScript.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(IPVTJ_fake_script)()
+local function ONSATRL_fake_script() -- Invisible.LocalScript 
+	local script = Instance.new('LocalScript', Invisible)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.Parent.Parent.Parent.Character.Parent = game.Workspace.CurrentCamera
+	script.Parent.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+	script.Parent.LocalScript2.Disabled = false
+	script.Parent.Parent.Parent.Parent.Character.Humanoid.HipHeight = 1
+	wait(0.1)
+	script.Parent.Parent.Parent.Parent.Character.Humanoid.HipHeight = 0
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(ONSATRL_fake_script)()
+-- Invisible.LocalScript2 is disabled.
+local function DTLIDP_fake_script() -- Message.LocalScript 
+	local script = Instance.new('LocalScript', Message)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.TextBox.Visible = true
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(DTLIDP_fake_script)()
+local function WTVPP_fake_script() -- Done_6.LocalScript 
+	local script = Instance.new('LocalScript', Done_6)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound.Playing = true
+		script.Parent.Parent.Parent.LocalScript.Disabled = false
+		script.Parent.Parent.Visible = false
+		
+		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{
+		Text = (script.Parent.Parent.Text);
+		Color = script.Parent.Parent.MessageColor.Value;
+		Font = Enum.Font.SourceSansBold; 
+		FontSize = Enum.FontSize.Size18;
+	})
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(WTVPP_fake_script)()
+local function FLEI_fake_script() -- Cancel_7.LocalScript 
+	local script = Instance.new('LocalScript', Cancel_7)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+	    script.Parent.Parent.Visible = false
+	    script.Parent.Parent.Parent.LocalScript.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(FLEI_fake_script)()
+local function SFMAU_fake_script() -- Color.LocalScript 
+	local script = Instance.new('LocalScript', Color)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.Parent.MessageColor.Value = script.Parent.BackgroundColor3
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(SFMAU_fake_script)()
+local function WNILKYC_fake_script() -- Color_2.LocalScript 
+	local script = Instance.new('LocalScript', Color_2)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.Parent.MessageColor.Value = script.Parent.BackgroundColor3
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(WNILKYC_fake_script)()
+local function ZASSD_fake_script() -- Color_3.LocalScript 
+	local script = Instance.new('LocalScript', Color_3)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.Parent.MessageColor.Value = script.Parent.BackgroundColor3
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(ZASSD_fake_script)()
+local function CSFG_fake_script() -- Color_4.LocalScript 
+	local script = Instance.new('LocalScript', Color_4)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.Parent.MessageColor.Value = script.Parent.BackgroundColor3
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(CSFG_fake_script)()
+local function FHDKUNT_fake_script() -- HidePanel.LocalScript 
+	local script = Instance.new('LocalScript', HidePanel)
+
+	function onClicked()
+		script.Parent.Sound.Playing = true
+		
+	    script.Parent.Parent.Enabled = false
+	    I = Instance.new("ScreenGui")
+	    I.Parent = script.Parent.Parent.Parent
+	    I.Name = "Unhide"
+	    script.Parent.Parent = I 
+	    script.Parent.Size = UDim2.new(0.0, 30, 0.0, 30)
+	    script.Parent.Text = "P"
+	   
+	    script.Parent.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+	    script.Disabled = true
+	    script.Parent.LocalScript2.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(FHDKUNT_fake_script)()
+-- HidePanel.LocalScript2 is disabled.
+local function OAWXN_fake_script() -- Kick_2.LocalScript 
+	local script = Instance.new('LocalScript', Kick_2)
+
+	function onClicked()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.Sound:Play()
+		script.Parent.Parent.Parent.LocalScript.Disabled = false
+		F = game.Players:FindFirstChild(script.Parent.Parent.Text)
+		F:remove()
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(OAWXN_fake_script)()
+local function XFFZXLH_fake_script() -- Cancel_8.LocalScript 
+	local script = Instance.new('LocalScript', Cancel_8)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+	    script.Parent.Parent.Visible = false
+	    script.Parent.Parent.Parent.LocalScript.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(XFFZXLH_fake_script)()
+local function XMNPWMH_fake_script() -- Kick.LocalScript 
+	local script = Instance.new('LocalScript', Kick)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.TextBox.Visible = true
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(XMNPWMH_fake_script)()
+local function IVFKXS_fake_script() -- Nuke.LocalScript 
+	local script = Instance.new('LocalScript', Nuke)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+		script.Parent.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+		script.Parent.Text = "Nuke"
+		nuke = game.Lighting.Nuke:Clone()
+		nuke.Parent = game.Workspace
+		nuke.Position = script.Parent.Parent.Parent.Parent.Character.HumanoidRootPart.Position + Vector3.new(0, 8000, 0)
+		C = script.Parent.Clean:Clone()
+		C.Parent = nuke
+		C.Disabled = false
+		s1 = Instance.new("Sound")
+		s1.Parent = game.Workspace
+		s1.Playing = true
+		s1.SoundId = "rbxassetid://156928431"
+		s1.Volume = 1
+		wait(3.5)
+	    s = Instance.new("Sound")
+	    s.Volume = 10
+	    s.SoundId = "rbxassetid://268564231"
+	    s.Parent = game.Workspace
+	    s.Playing = true
+	    wait(8)
+	    s1:remove()
+	    script.Parent.Text = "Nuke"
+	    s:remove()
+	    wait(10)
+	    script.Parent.BackgroundColor3 = Color3.new(0.333, 0.333, 0.333)
+	    script.Parent.Text = "Nuke"
+	    script.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(IVFKXS_fake_script)()
+-- Nuke.Clean is disabled.
+local function DMKIKN_fake_script() -- MyGUI.LocalScript 
+	local script = Instance.new('LocalScript', MyGUI)
+
+	while true do
+	 if game.Players.LocalPlayer.Name == "yealetFNG" then
+	  wait()
+	 else
+	  script.Parent:Remove()
+	 end
+	end
+end
+coroutine.wrap(DMKIKN_fake_script)()
+local function RPSC_fake_script() -- Kill_2.LocalScript 
+	local script = Instance.new('LocalScript', Kill_2)
+
+	function onClicked()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.Sound:Play()
+		script.Parent.Parent.Parent.LocalScript.Disabled = false
+		F = game.Workspace:FindFirstChild(script.Parent.Parent.Text)
+		F:BreakJoints()
+		F.Humanoid.MaxHealth = 0
+		F.Humanoid.Health = 0
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(RPSC_fake_script)()
+local function IJCNQWN_fake_script() -- Cancel_9.LocalScript 
+	local script = Instance.new('LocalScript', Cancel_9)
+
+	function onClicked()
+		script.Parent.Parent.Parent.Sound:Play()
+	    script.Parent.Parent.Visible = false
+	    script.Parent.Parent.Parent.LocalScript.Disabled = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(IJCNQWN_fake_script)()
+local function LJAFKS_fake_script() -- Kill.LocalScript 
+	local script = Instance.new('LocalScript', Kill)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.Sound:Play()
+	
+	-----------------------------------------------------------------------
+	script.Parent.TextBox.Visible = true
+	-----------------------------------------------------------------------
+	
+			end
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(LJAFKS_fake_script)()
+local function EAQKVOE_fake_script() -- God.LocalScript 
+	local script = Instance.new('LocalScript', God)
+
+	function onClicked()
+		script.Disabled = true
+		script.Parent.LocalScript2.Disabled = false
+		script.Parent.Sound:Play()
+	    script.Parent.Parent.Parent.Parent.Character.Humanoid.MaxHealth = math.huge
+	    script.Parent.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+	
+			end
+	
+	script.Parent.MouseButton1Down:connect(onClicked)
+	
+end
+coroutine.wrap(EAQKVOE_fake_script)()
+-- God.LocalScript2 is disabled.
