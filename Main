@@ -1,0 +1,955 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Applicationsrbxm = Instance.new("Frame")
+local _1KillButtonrbxm = Instance.new("TextButton")
+local _2FreezeButtonrbxm = Instance.new("TextButton")
+local _3UnfreezeButtonrbxm = Instance.new("TextButton")
+local _1SetWalkspeedButtonrbxm = Instance.new("TextButton")
+local _2EditStatButtonrbxm = Instance.new("TextButton")
+local _3GiveFFButtonrbxm = Instance.new("TextButton")
+local _1RemoveFFButtonrbxm = Instance.new("TextButton")
+local _2MessageButtonrbxm = Instance.new("TextButton")
+local _3PrivateMsgButtonrbxm = Instance.new("TextButton")
+local _1BanButtonrbxm = Instance.new("TextButton")
+local _2RunLuaButtonrbxm = Instance.new("TextButton")
+local InputBoxrbxm = Instance.new("Frame")
+local TextBoxrbxm = Instance.new("TextBox")
+local TextButtonrbxm = Instance.new("TextButton")
+local PlayerListrbxm = Instance.new("Frame")
+local TextButtonrbxm_2 = Instance.new("TextButton")
+local StatListrbxm = Instance.new("Frame")
+local TextButtonrbxm_3 = Instance.new("TextButton")
+local ShowHiderbxm = Instance.new("TextButton")
+local Holder = Instance.new("Frame")
+local ID = Instance.new("TextBox")
+local Frame_2 = Instance.new("Frame")
+local clicker = Instance.new("TextButton")
+local percent = Instance.new("Frame")
+local reader = Instance.new("TextLabel")
+local ds = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 100, 0, 100)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(10.9700003, 0, 1.67000008, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "Retro's Hack's"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+Applicationsrbxm.Name = "Applications.rbxm"
+Applicationsrbxm.Parent = ScreenGui
+Applicationsrbxm.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Applicationsrbxm.BorderSizePixel = 0
+Applicationsrbxm.Position = UDim2.new(0.0766576827, 0, 0.253345728, 0)
+Applicationsrbxm.Size = UDim2.new(0.25, 0, 0.200000003, 0)
+Applicationsrbxm.Style = Enum.FrameStyle.RobloxRound
+
+_1KillButtonrbxm.Name = "[1]KillButton.rbxm"
+_1KillButtonrbxm.Parent = Applicationsrbxm
+_1KillButtonrbxm.Position = UDim2.new(2.81264448, 0, 0, 0)
+_1KillButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_1KillButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_1KillButtonrbxm.Text = "Kill"
+_1KillButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1KillButtonrbxm.TextSize = 9.000
+
+_2FreezeButtonrbxm.Name = "[2]FreezeButton.rbxm"
+_2FreezeButtonrbxm.Parent = Applicationsrbxm
+_2FreezeButtonrbxm.Position = UDim2.new(3.18864441, 0, 0, 0)
+_2FreezeButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_2FreezeButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_2FreezeButtonrbxm.Text = "Freeze"
+_2FreezeButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_2FreezeButtonrbxm.TextSize = 9.000
+
+_3UnfreezeButtonrbxm.Name = "[3]UnfreezeButton.rbxm"
+_3UnfreezeButtonrbxm.Parent = Applicationsrbxm
+_3UnfreezeButtonrbxm.Position = UDim2.new(3.56264448, 0, 0, 0)
+_3UnfreezeButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_3UnfreezeButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_3UnfreezeButtonrbxm.Text = "Unfreeze"
+_3UnfreezeButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_3UnfreezeButtonrbxm.TextSize = 9.000
+
+_1SetWalkspeedButtonrbxm.Name = "[1]SetWalkspeedButton.rbxm"
+_1SetWalkspeedButtonrbxm.Parent = Applicationsrbxm
+_1SetWalkspeedButtonrbxm.Position = UDim2.new(2.81264448, 0, 0.25, 0)
+_1SetWalkspeedButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_1SetWalkspeedButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_1SetWalkspeedButtonrbxm.Text = "Set Speed"
+_1SetWalkspeedButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1SetWalkspeedButtonrbxm.TextSize = 9.000
+
+_2EditStatButtonrbxm.Name = "[2]EditStatButton.rbxm"
+_2EditStatButtonrbxm.Parent = Applicationsrbxm
+_2EditStatButtonrbxm.Position = UDim2.new(3.18864441, 0, 0.25, 0)
+_2EditStatButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_2EditStatButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_2EditStatButtonrbxm.Text = "Edit Stat"
+_2EditStatButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_2EditStatButtonrbxm.TextSize = 9.000
+
+_3GiveFFButtonrbxm.Name = "[3]GiveFFButton.rbxm"
+_3GiveFFButtonrbxm.Parent = Applicationsrbxm
+_3GiveFFButtonrbxm.Position = UDim2.new(3.56264448, 0, 0.25, 0)
+_3GiveFFButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_3GiveFFButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_3GiveFFButtonrbxm.Text = "Give FF"
+_3GiveFFButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_3GiveFFButtonrbxm.TextSize = 9.000
+
+_1RemoveFFButtonrbxm.Name = "[1]RemoveFFButton.rbxm"
+_1RemoveFFButtonrbxm.Parent = Applicationsrbxm
+_1RemoveFFButtonrbxm.Position = UDim2.new(2.81264448, 0, 0.5, 0)
+_1RemoveFFButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_1RemoveFFButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_1RemoveFFButtonrbxm.Text = "Remove FF"
+_1RemoveFFButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1RemoveFFButtonrbxm.TextSize = 9.000
+
+_2MessageButtonrbxm.Name = "[2]MessageButton.rbxm"
+_2MessageButtonrbxm.Parent = Applicationsrbxm
+_2MessageButtonrbxm.Position = UDim2.new(3.18864441, 0, 0.5, 0)
+_2MessageButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_2MessageButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_2MessageButtonrbxm.Text = "Message"
+_2MessageButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_2MessageButtonrbxm.TextSize = 9.000
+
+_3PrivateMsgButtonrbxm.Name = "[3]PrivateMsgButton.rbxm"
+_3PrivateMsgButtonrbxm.Parent = Applicationsrbxm
+_3PrivateMsgButtonrbxm.Position = UDim2.new(3.56264448, 0, 0.5, 0)
+_3PrivateMsgButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_3PrivateMsgButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_3PrivateMsgButtonrbxm.Text = "Private Msg"
+_3PrivateMsgButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_3PrivateMsgButtonrbxm.TextSize = 9.000
+
+_1BanButtonrbxm.Name = "[1]BanButton.rbxm"
+_1BanButtonrbxm.Parent = Applicationsrbxm
+_1BanButtonrbxm.Position = UDim2.new(2.81264448, 0, 0.75, 0)
+_1BanButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_1BanButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_1BanButtonrbxm.Text = "Ban"
+_1BanButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1BanButtonrbxm.TextSize = 9.000
+
+_2RunLuaButtonrbxm.Name = "[2]RunLuaButton.rbxm"
+_2RunLuaButtonrbxm.Parent = Applicationsrbxm
+_2RunLuaButtonrbxm.Position = UDim2.new(3.18864441, 0, 0.75, 0)
+_2RunLuaButtonrbxm.Size = UDim2.new(0.25, 0, 0.25, 0)
+_2RunLuaButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+_2RunLuaButtonrbxm.Text = "Run Lua"
+_2RunLuaButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+_2RunLuaButtonrbxm.TextSize = 9.000
+
+InputBoxrbxm.Name = "InputBox.rbxm"
+InputBoxrbxm.Parent = ScreenGui
+InputBoxrbxm.Position = UDim2.new(0.246915966, 0, -0.501239181, 0)
+InputBoxrbxm.Size = UDim2.new(0.5, 0, 0.5, 0)
+InputBoxrbxm.Style = Enum.FrameStyle.RobloxRound
+
+TextBoxrbxm.Name = "TextBox.rbxm"
+TextBoxrbxm.Parent = InputBoxrbxm
+TextBoxrbxm.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBoxrbxm.BackgroundTransparency = 0.100
+TextBoxrbxm.BorderColor3 = Color3.fromRGB(95, 95, 95)
+TextBoxrbxm.Position = UDim2.new(0, 0, 0.324999988, 0)
+TextBoxrbxm.Size = UDim2.new(1, 0, 0.25, 0)
+TextBoxrbxm.Text = "Type a number here."
+TextBoxrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBoxrbxm.TextSize = 18.000
+TextBoxrbxm.TextWrapped = true
+TextBoxrbxm.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButtonrbxm.Name = "TextButton.rbxm"
+TextButtonrbxm.Parent = InputBoxrbxm
+TextButtonrbxm.Position = UDim2.new(0.699999988, 0, 0.800000012, 0)
+TextButtonrbxm.Size = UDim2.new(0.300000012, 0, 0.200000003, 0)
+TextButtonrbxm.Style = Enum.ButtonStyle.RobloxButton
+TextButtonrbxm.Text = "Ok!"
+TextButtonrbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButtonrbxm.TextSize = 12.000
+
+PlayerListrbxm.Name = "PlayerList.rbxm"
+PlayerListrbxm.Parent = ScreenGui
+PlayerListrbxm.Position = UDim2.new(0.246915966, 0, -0.501239181, 0)
+PlayerListrbxm.Size = UDim2.new(0.5, 0, 0.5, 0)
+PlayerListrbxm.Style = Enum.FrameStyle.RobloxRound
+
+TextButtonrbxm_2.Name = "TextButton.rbxm"
+TextButtonrbxm_2.Parent = PlayerListrbxm
+TextButtonrbxm_2.Position = UDim2.new(0, 0, -0.200000003, 0)
+TextButtonrbxm_2.Size = UDim2.new(0.25, 0, 0.200000003, 0)
+TextButtonrbxm_2.Style = Enum.ButtonStyle.RobloxButton
+TextButtonrbxm_2.Text = "Close"
+TextButtonrbxm_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButtonrbxm_2.TextSize = 10.000
+
+StatListrbxm.Name = "StatList.rbxm"
+StatListrbxm.Parent = ScreenGui
+StatListrbxm.Position = UDim2.new(0.246915966, 0, -0.501239181, 0)
+StatListrbxm.Size = UDim2.new(0.5, 0, 0.5, 0)
+StatListrbxm.Style = Enum.FrameStyle.RobloxRound
+
+TextButtonrbxm_3.Name = "TextButton.rbxm"
+TextButtonrbxm_3.Parent = StatListrbxm
+TextButtonrbxm_3.Position = UDim2.new(0, 0, -0.200000003, 0)
+TextButtonrbxm_3.Size = UDim2.new(0.25, 0, 0.200000003, 0)
+TextButtonrbxm_3.Style = Enum.ButtonStyle.RobloxButton
+TextButtonrbxm_3.Text = "Close"
+TextButtonrbxm_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButtonrbxm_3.TextSize = 10.000
+
+ShowHiderbxm.Name = "ShowHide.rbxm"
+ShowHiderbxm.Parent = ScreenGui
+ShowHiderbxm.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ShowHiderbxm.BorderColor3 = Color3.fromRGB(204, 0, 0)
+ShowHiderbxm.Draggable = true
+ShowHiderbxm.Position = UDim2.new(0.196915969, 765, 0.198760852, -45)
+ShowHiderbxm.Size = UDim2.new(0.150000006, 0, 0.0500000007, 0)
+ShowHiderbxm.SizeConstraint = Enum.SizeConstraint.RelativeXX
+ShowHiderbxm.Style = Enum.ButtonStyle.RobloxButtonDefault
+ShowHiderbxm.Text = "SHOW/HIDE ADMIN"
+ShowHiderbxm.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Holder.Name = "Holder"
+Holder.Parent = ScreenGui
+Holder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Holder.Draggable = true
+Holder.Position = UDim2.new(0.300000012, 0, 0, 0)
+Holder.Size = UDim2.new(0.300000012, 0, 0.0430000015, 0)
+Holder.Style = Enum.FrameStyle.DropShadow
+
+ID.Name = "ID"
+ID.Parent = Holder
+ID.BackgroundColor3 = Color3.fromRGB(0, 115, 255)
+ID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ID.BorderSizePixel = 0
+ID.Position = UDim2.new(0.360000014, 0, 0, 0)
+ID.Size = UDim2.new(0.300000012, 0, 1.02499998, 0)
+ID.Font = Enum.Font.ArialBold
+ID.Text = "Enter Song ID"
+ID.TextColor3 = Color3.fromRGB(255, 255, 255)
+ID.TextScaled = true
+ID.TextSize = 14.000
+ID.TextWrapped = true
+
+Frame_2.Parent = ID
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.ClipsDescendants = true
+Frame_2.Size = UDim2.new(0.990099013, 0, 0, 0)
+
+clicker.Name = "clicker"
+clicker.Parent = Holder
+clicker.BackgroundColor3 = Color3.fromRGB(195, 0, 0)
+clicker.BorderColor3 = Color3.fromRGB(71, 71, 71)
+clicker.BorderSizePixel = 0
+clicker.ClipsDescendants = true
+clicker.Position = UDim2.new(0.670000017, 0, 0, 0)
+clicker.Size = UDim2.new(0.330000013, 0, 1.02499998, 0)
+clicker.ZIndex = 2
+clicker.AutoButtonColor = false
+clicker.Font = Enum.Font.SourceSans
+clicker.Text = ""
+clicker.TextColor3 = Color3.fromRGB(0, 7, 53)
+clicker.TextSize = 14.000
+
+percent.Name = "percent"
+percent.Parent = clicker
+percent.BackgroundColor3 = Color3.fromRGB(34, 185, 0)
+percent.BorderSizePixel = 0
+percent.Size = UDim2.new(0.446428567, 0, 1, 0)
+percent.ZIndex = 2
+
+reader.Name = "reader"
+reader.Parent = clicker
+reader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+reader.BackgroundTransparency = 1.000
+reader.BorderColor3 = Color3.fromRGB(255, 253, 251)
+reader.BorderSizePixel = 0
+reader.Size = UDim2.new(1, 0, 1, 0)
+reader.ZIndex = 2
+reader.Font = Enum.Font.ArialBold
+reader.Text = "50%"
+reader.TextColor3 = Color3.fromRGB(255, 255, 255)
+reader.TextScaled = true
+reader.TextSize = 14.000
+reader.TextStrokeColor3 = Color3.fromRGB(0, 209, 255)
+reader.TextWrapped = true
+
+ds.Name = "ds"
+ds.Parent = Holder
+ds.Active = false
+ds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ds.BorderSizePixel = 0
+ds.Size = UDim2.new(0.349999994, 0, 1.02499998, 0)
+ds.AutoButtonColor = false
+ds.Font = Enum.Font.ArialBold
+ds.Text = "NO SONG SELECTED"
+ds.TextColor3 = Color3.fromRGB(0, 132, 255)
+ds.TextScaled = true
+ds.TextSize = 10.000
+ds.TextStrokeColor3 = Color3.fromRGB(179, 231, 255)
+ds.TextStrokeTransparency = 0.300
+ds.TextWrapped = true
+
+-- Scripts:
+
+local function BEXO_fake_script() -- ScreenGui.GlobalLibrary.lua 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	_G.Gui = nil
+	wait(1)
+	local Project = script.Parent
+	local ApplicationFrame = Project["Applications.rbxm"]
+	local PlayerList = Project["PlayerList.rbxm"]
+	local InputBox = Project["InputBox.rbxm"]
+	local StatList = Project["StatList.rbxm"]
+	local TargetPlayer = nil
+	local TargetStat = nil
+	
+	_G.Gui = {
+		HideApplicationFrame = function(self)
+			ApplicationFrame:TweenPosition(UDim2.new((0-ApplicationFrame.Size.X.Scale) - 0.025,0,ApplicationFrame.Position.Y.Scale,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 1, true)
+		end,
+		ShowApplicationFrame = function(self)
+			ApplicationFrame:TweenPosition(UDim2.new(0.025,0,ApplicationFrame.Position.Y.Scale,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 1, true)
+		end,
+		HidePlayerList = function(self)
+			PlayerList:TweenPosition(UDim2.new(PlayerList.Position.X.Scale,0,0-PlayerList.Size.Y.Scale,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 1, true)
+		end,
+		ShowPlayerList = function(self)
+			PlayerList:TweenPosition(UDim2.new(PlayerList.Position.X.Scale,0,.25,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 1, true)
+		end,
+		HideInputBox = function(self)
+			InputBox:TweenPosition(UDim2.new(InputBox.Position.X.Scale,0,0-InputBox.Size.Y.Scale,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 1, true)
+		end,
+		ShowInputBox = function(self)
+			InputBox:TweenPosition(UDim2.new(InputBox.Position.X.Scale,0,.25,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 1, true)
+		end,
+		HideStatList = function(self)
+			StatList:TweenPosition(UDim2.new(StatList.Position.X.Scale,0,0-StatList.Size.Y.Scale,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 1, true)
+		end,
+		ShowStatList= function(self)
+			StatList:TweenPosition(UDim2.new(StatList.Position.X.Scale,0,.25,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 1, true)
+		end,
+		GenerateListOfPlayers = function(self)
+			local downBy = 0
+			local currenty = 0
+			for i,v in pairs(Game.Players:GetPlayers()) do
+				local tb = Instance.new("TextButton", PlayerList)
+				tb.TextXAlignment = Enum.TextXAlignment.Center
+				tb.Style = Enum.ButtonStyle.RobloxButton
+				tb.TextColor3 = Color3.new(1,1,1)
+				tb.FontSize = Enum.FontSize.Size10
+				tb.Text = v.Name
+				tb.Size = UDim2.new(1,0,1/#Game.Players:GetPlayers(),0)
+				tb.Position = UDim2.new(0,0,currenty,0)
+				currenty = currenty + 1/#Game.Players:GetPlayers()
+			end
+			_G.Gui:HideApplicationFrame()
+			_G.Gui:ShowPlayerList()
+		end,
+		GenerateListOfStats = function(self)
+			local downBy = 0
+			local currenty = 0
+			local numberstats = {}
+			repeat wait() until Game.Players.LocalPlayer:FindFirstChild("leaderstats")
+			for i,v in pairs(Game.Players.LocalPlayer.leaderstats:GetChildren()) do
+				if v:IsA("NumberValue") or v:IsA("IntValue") then
+					table.insert(numberstats, v)
+				end
+			end
+			for i,v in pairs(numberstats) do
+				local tb = Instance.new("TextButton", StatList)
+				tb.TextXAlignment = Enum.TextXAlignment.Center
+				tb.Style = Enum.ButtonStyle.RobloxButton
+				tb.TextColor3 = Color3.new(1,1,1)
+				tb.FontSize = Enum.FontSize.Size10
+				tb.Text = v.Name
+				tb.Size = UDim2.new(1,0,1/#numberstats,0)
+				tb.Position = UDim2.new(0,0,currenty,0)
+				currenty = currenty + 1/#numberstats
+			end
+			_G.Gui:HideApplicationFrame()
+			_G.Gui:ShowStatList()
+		end,
+		ClearListOfPlayers = function(self)
+			for i,v in pairs(PlayerList:GetChildren()) do
+				if v.Name ~= "TextButton.rbxm" then
+					v:Remove()
+				end
+			end
+		end,
+		ClearListOfStats = function(self)
+			for i,v in pairs(StatList:GetChildren()) do
+				if v.Name ~= "TextButton.rbxm" then
+					v:Remove()
+				end
+			end
+		end,
+		ResetInputBox = function()
+			InputBox["TextBox.rbxm"].Text = "Type a number here."
+		end,
+		ResetTextInputBox = function()
+			InputBox["TextBox.rbxm"].Text = "Type some text here."
+		end,
+		SetTargetPlayer = function(self, player)
+			TargetPlayer = player
+		end,
+		GetTargetPlayer = function(self)
+			return TargetPlayer
+		end,
+		SetTargetStat= function(self, sstat)
+			TargetStat = sstat
+		end,
+		GetTargetStat = function(self)
+			return TargetStat
+		end,
+		PlayerChoiceSelected = function(self, Function)
+			coroutine.wrap(function()
+				for i,v in pairs(PlayerList:GetChildren()) do
+					if v.Name ~= "TextButton.rbxm" then
+						connection = v.MouseButton1Click:connect(function()
+							_G.Gui:ClearListOfPlayers()
+							_G.Gui:HidePlayerList()
+							_G.Gui:ShowApplicationFrame()
+							_G.Gui:SetTargetPlayer(Game.Players:FindFirstChild(v.Text) or nil)
+							coroutine.resume(coroutine.create(function() Function(_G.Gui:GetTargetPlayer(), connection) end))
+						end)
+					end
+				end
+			end)()
+		end,
+		StatChoiceSelected = function(self, Function)
+			coroutine.wrap(function()
+				for i,v in pairs(StatList:GetChildren()) do
+					if v.Name ~= "TextButton.rbxm" then
+						connection = v.MouseButton1Click:connect(function()
+							_G.Gui:ClearListOfStats()
+							_G.Gui:HideStatList()
+							_G.Gui:ShowApplicationFrame()
+							_G.Gui:SetTargetStat(Game.Players.LocalPlayer.leaderstats:FindFirstChild(v.Text) or nil)
+							coroutine.resume(coroutine.create(function() Function(_G.Gui:GetTargetStat(), connection) end))
+						end)
+					end
+				end
+			end)()
+		end,
+		GetUserInput = function(self, Function)
+			coroutine.wrap(function()
+				_G.Gui:HideApplicationFrame()
+				_G.Gui:ShowInputBox()
+				_G.Gui:ResetInputBox()
+				connection = InputBox["TextButton.rbxm"].MouseButton1Click:connect(function()
+					input = tonumber(InputBox["TextBox.rbxm"].Text)
+					coroutine.resume(coroutine.create(function() Function(input) end))
+					_G.Gui:HideInputBox()
+					_G.Gui:ShowApplicationFrame()
+					connection:disconnect()
+				end)
+			end)()
+		end,
+		GetUserTextInput = function(self, Function)
+			print("Getting text input...")
+			coroutine.wrap(function()
+				print("Running wrap().")
+				_G.Gui:HideApplicationFrame()
+				_G.Gui:ShowInputBox()
+				_G.Gui:ResetTextInputBox()
+				connection = InputBox["TextButton.rbxm"].MouseButton1Click:connect(function()
+					input = InputBox["TextBox.rbxm"].Text
+					coroutine.resume(coroutine.create(function() Function(input) end))
+					print("Ran given function argument.")
+					_G.Gui:HideInputBox()
+					_G.Gui:ShowApplicationFrame()
+					connection:disconnect()
+				end)
+			end)()
+		end,
+	}
+end
+coroutine.wrap(BEXO_fake_script)()
+local function FDSGEND_fake_script() -- _1KillButtonrbxm.Kill.lua 
+	local script = Instance.new('LocalScript', _1KillButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GenerateListOfPlayers()
+		Gui:PlayerChoiceSelected(function(player, connection)
+			if player then
+				if player.Character then
+					player.Character:BreakJoints()
+				end
+			end
+			connection:disconnect()
+		end)
+	end)
+end
+coroutine.wrap(FDSGEND_fake_script)()
+local function NLKHGX_fake_script() -- _2FreezeButtonrbxm.Freeze.lua 
+	local script = Instance.new('LocalScript', _2FreezeButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GenerateListOfPlayers()
+		Gui:PlayerChoiceSelected(function(player, connection)
+			if player then
+				if player.Character then
+					for i,v in pairs(player.Character:GetChildren()) do
+						if v:IsA("BasePart") then
+							v.Reflectance = 1
+						end
+					end
+					player.Character.Torso.Anchored = true
+					player.Character.Humanoid.WalkSpeed = 0
+				end
+			end
+			connection:disconnect()
+		end)
+	end)
+end
+coroutine.wrap(NLKHGX_fake_script)()
+local function ILEQZDC_fake_script() -- _3UnfreezeButtonrbxm.Unfreeze.lua 
+	local script = Instance.new('LocalScript', _3UnfreezeButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GenerateListOfPlayers()
+		Gui:PlayerChoiceSelected(function(player, connection)
+			if player then
+				if player.Character then
+					for i,v in pairs(player.Character:GetChildren()) do
+						if v:IsA("BasePart") then
+							v.Reflectance = 0
+						end
+					end
+					player.Character.Torso.Anchored = false
+					player.Character.Humanoid.WalkSpeed = 16
+				end
+			end
+			connection:disconnect()
+		end)
+	end)
+end
+coroutine.wrap(ILEQZDC_fake_script)()
+local function ZYLAAAW_fake_script() -- _1SetWalkspeedButtonrbxm.SetWalkspeed.lua 
+	local script = Instance.new('LocalScript', _1SetWalkspeedButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GenerateListOfPlayers()
+		Gui:PlayerChoiceSelected(function(player, connection)
+			Gui:GetUserInput(function(input)
+				if input then
+					if player then
+						if player.Character then
+							player.Character.Humanoid.WalkSpeed = input
+						end
+					end
+				end
+				connection:disconnect()
+			end)
+		end)
+	end)
+end
+coroutine.wrap(ZYLAAAW_fake_script)()
+local function AGOFK_fake_script() -- _2EditStatButtonrbxm.EditStat.lua 
+	local script = Instance.new('LocalScript', _2EditStatButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GenerateListOfStats()
+		Gui:StatChoiceSelected(function(sstat, connection)
+			Gui:GetUserInput(function(input)
+				if input and sstat then
+					sstat.Value = input
+				end
+				connection:disconnect()
+			end)
+		end)
+	end)
+end
+coroutine.wrap(AGOFK_fake_script)()
+local function CFPT_fake_script() -- _3GiveFFButtonrbxm.GiveFF.lua 
+	local script = Instance.new('LocalScript', _3GiveFFButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GenerateListOfPlayers()
+		Gui:PlayerChoiceSelected(function(player, connection)
+			if player then
+				if player.Character then
+					Instance.new("ForceField", player.Character)
+				end
+			end
+			connection:disconnect()
+		end)
+	end)
+end
+coroutine.wrap(CFPT_fake_script)()
+local function KPEHJAW_fake_script() -- _1RemoveFFButtonrbxm.RemoveFF.lua 
+	local script = Instance.new('LocalScript', _1RemoveFFButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GenerateListOfPlayers()
+		Gui:PlayerChoiceSelected(function(player, connection)
+			if player then
+				if player.Character then
+					pcall(function() player.Character.ForceField:Remove() end)
+				end
+			end
+			connection:disconnect()
+		end)
+	end)
+end
+coroutine.wrap(KPEHJAW_fake_script)()
+local function HBPQW_fake_script() -- _2MessageButtonrbxm.Message.lua 
+	local script = Instance.new('LocalScript', _2MessageButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GetUserTextInput(function(input)
+			local m = Instance.new("Message")
+			m.Text = input
+			m.Parent = Workspace
+			wait(2)
+			m:Remove()
+		end)
+	end)
+end
+coroutine.wrap(HBPQW_fake_script)()
+local function LSNQCL_fake_script() -- _3PrivateMsgButtonrbxm.PrivateMsg.lua 
+	local script = Instance.new('LocalScript', _3PrivateMsgButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GenerateListOfPlayers()
+		Gui:PlayerChoiceSelected(function(player, connection)
+			Gui:GetUserTextInput(function(input)
+				print("Got user text input!")
+				if input and player and player.Character then
+					local m = Instance.new("Message")
+					m.Text = input
+					m.Parent = player.PlayerGui
+					wait(2)
+					m:Remove()
+				end
+				connection:disconnect()
+			end)
+		end)
+	end)
+end
+coroutine.wrap(LSNQCL_fake_script)()
+local function JPMMVUR_fake_script() -- _1BanButtonrbxm.Ban.lua 
+	local script = Instance.new('LocalScript', _1BanButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GenerateListOfPlayers()
+		Gui:PlayerChoiceSelected(function(player, connection)
+			if player then
+				player:Remove()
+			end
+			connection:disconnect()
+		end)
+	end)
+end
+coroutine.wrap(JPMMVUR_fake_script)()
+local function NEPP_fake_script() -- _2RunLuaButtonrbxm.RunLua.lua 
+	local script = Instance.new('LocalScript', _2RunLuaButtonrbxm)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:GetUserTextInput(function(input)
+			coroutine.resume(coroutine.create(function()
+				loadstring(input)()
+			end))
+		end)
+	end)
+end
+coroutine.wrap(NEPP_fake_script)()
+local function XTHFIYU_fake_script() -- TextButtonrbxm_2.ClosePlayerList.lua 
+	local script = Instance.new('LocalScript', TextButtonrbxm_2)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:ClearListOfPlayers()
+		Gui:HidePlayerList()
+		Gui:ShowApplicationFrame()
+	end)
+end
+coroutine.wrap(XTHFIYU_fake_script)()
+local function NSMU_fake_script() -- TextButtonrbxm_3.CloseStatList.lua 
+	local script = Instance.new('LocalScript', TextButtonrbxm_3)
+
+	wait(1)
+	while not _G.Gui do
+		wait()
+	end
+	
+	local Gui = _G.Gui
+	
+	script.Parent.MouseButton1Click:connect(function()
+		Gui:ClearListOfStats()
+		Gui:HideStatList()
+		Gui:ShowApplicationFrame()
+	end)
+end
+coroutine.wrap(NSMU_fake_script)()
+local function ITHZBPX_fake_script() -- ShowHiderbxm.ShowHide.lua 
+	local script = Instance.new('LocalScript', ShowHiderbxm)
+
+	visible=script.Parent.Parent.Visible
+	
+	script.Parent.MouseButton1Click:connect(function()
+		if visible.Value==true then
+			for _,obj in pairs(script.Parent.Parent:GetChildren()) do
+				if obj:IsA("Frame") then
+					obj.Visible=false
+					visible.Value=false
+				end
+			end
+		elseif visible.Value==false then
+			for _,obj in pairs(script.Parent.Parent:GetChildren()) do
+				if obj:IsA("Frame") then
+					obj.Visible=true
+					visible.Value=true
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(ITHZBPX_fake_script)()
+local function HGAMPWM_fake_script() -- ScreenGui.Main 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	--[[ Only edit lines 39-44! ]]--
+	
+	GUI = script.Parent.Holder.clicker
+	APOS = 0.025
+	list = script.Parent.Holder.ID.Frame
+	script.Parent.Holder:WaitForChild("ds")
+	if not game.Players.LocalPlayer:findFirstChild("Music") then
+	music = Instance.new("Sound")
+	music.Parent = game.Players.LocalPlayer
+	music.Name = "Music"
+	music.Looped = true
+	music.Volume = 0.5
+	mID=Instance.new("NumberValue",music)
+	mID.Name = "ID"
+	else music = game.Players.LocalPlayer.Music
+	end
+	usr = game:GetService("UserInputService")
+	Window = script.Parent.Holder.ID.Frame
+	dp = script.Parent.Holder.ds
+	slider = script.Parent.Holder.clicker.percent
+	SY = script.Parent.Holder.clicker.percent.Size.Y.Scale
+	reader = script.Parent.Holder.clicker.reader 
+	drpITM_SPACING = 17
+	winY = 1
+	local index = 0 
+	
+	local function select(ID,n)
+		music:Stop()
+		music.SoundId = "http://www.roblox.com/asset/?id="..ID
+		dp.Text = "Loading"
+		dp.Text = "Song - "..n
+		music.ID.Value = ID
+		music:Play()
+		dp.BackgroundColor3 = Color3.new(0/255,213/255,255/255)
+	end
+	
+	-- Put ID of song then change the name of what you want displayed on the actual UI.
+	musicLIST = {
+	[1]={131111368,"Radioactive"};
+	[2]={413625451,"Alone"};
+	[3]={717250051,"Keep it Mello"};
+	[4]={198299546,"Electric Joy Ride"}; 
+	[5]={182621515,"Stamp on the Ground"};
+	[6]={342954907,"Red Lips"};
+	}
+	-- Don't go on!
+	
+	for i,_ in pairs(musicLIST) do
+		local drpITM = Instance.new("TextButton",Window)
+		drpITM.Name = tostring(i)
+		local info = Instance.new("NumberValue",drpITM)
+		drpITM.Size = UDim2.new(0,100,0,20)
+		drpITM.Position = UDim2.new(0,0,0,index+drpITM_SPACING)
+		drpITM.BorderSizePixel = 0
+		drpITM.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+		drpITM.TextScaled = false
+		drpITM.TextWrapped = true
+		drpITM.TextColor3 = Color3.new(1,1,1)
+		drpITM.BackgroundTransparency = 1
+		drpITM.Font = Enum.Font.Legacy
+		info.Value  =_[1]
+		drpITM.Text =_[2]
+		drpITM.MouseButton1Down:connect(function() select(info.Value,drpITM.Text) end)
+		index = drpITM.Position.Y.Offset
+		winY = winY+drpITM.Size.Y.Offset
+	if music.ID.Value == _[1] then dp.Text = _[2]
+		slider:TweenSize(UDim2.new(tonumber(music.Volume),0,SY,0),Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.5,true)
+		reader.Text =(math.ceil(music.Volume*100)).."%"
+	end
+	end
+	
+	plr = game.Players.LocalPlayer
+	mouse = plr:GetMouse()
+	sliderSIZE = reader.Parent.Parent.Parent.AbsoluteSize.X
+	MAX = 100
+	
+	GUI.MouseButton1Down:connect(function(x,y)
+		local total = slider.AbsolutePosition.X+slider.AbsoluteSize.X
+	
+	x = x-slider.AbsolutePosition.X
+	
+	print(x.."/"..total.." Value")
+		
+		
+		if x > MAX then x = MAX end
+		slider:TweenSize(UDim2.new(tonumber(x/100),0,SY,0),Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.5,true)
+		reader.Text = x.."%"
+		music.Volume = x/100
+	end)
+	
+	dp.MouseButton1Down:connect(function()
+		if music.SoundId == "" then return end 
+		if dp.BackgroundColor3 == Color3.new(0/255,213/255,255/255) then
+			music:Pause()
+			dp.BackgroundColor3 = Color3.new(1,1,1)
+			else music:Play()dp.BackgroundColor3 = Color3.new(0/255,213/255,255/255)
+		end
+	end)
+	
+	--[[script.Parent.MouseButton1Down:connect(function()
+		if GUI.Position.Y.Scale < APOS then
+		GUI:TweenPosition(UDim2.new(0.5,0,APOS,0),Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.5, true)
+		else
+		GUI:TweenPosition(UDim2.new(0.5,0,-0.025,0),Enum.EasingDirection.In, Enum.EasingStyle.Linear, 0.5, true)
+		end
+	end)--]]
+	
+	--if usr.MouseEnabled and usr.KeyboardEnabled then
+	print("Computer/Laptop")
+	Window.MouseLeave:connect(function()
+		Window:TweenSizeAndPosition(UDim2.new(0,Window.AbsoluteSize.X,0,0),UDim2.new(0,(Window.AbsolutePosition.X-Window.Parent.AbsolutePosition.X)/(Window.Parent.AbsolutePosition.X+1),0,(Window.AbsolutePosition.Y-Window.Parent.AbsolutePosition.Y)/(Window.Parent.AbsolutePosition.Y+1)),"Out","Sine",0.25)
+	end)
+	
+	Window.Parent.MouseEnter:connect(function()
+		Window:TweenSizeAndPosition(UDim2.new(0,Window.AbsoluteSize.X,0,winY),UDim2.new(0,(Window.AbsolutePosition.X-Window.Parent.AbsolutePosition.X)/(Window.Parent.AbsolutePosition.X+1),0,(Window.AbsolutePosition.Y-Window.Parent.AbsolutePosition.Y)/(Window.Parent.AbsolutePosition.Y+1)),"Out","Sine",0.25)
+	end)
+	
+	
+	Window.Parent.FocusLost:connect(function()
+		 pcall(function() local asst = game:GetService("MarketplaceService"):GetProductInfo(tonumber(Window.Parent.Text))
+		music:Stop()
+		music.SoundId="http://www.roblox.com/asset/?id="..tonumber(Window.Parent.Text)
+		dp.Text = "Loading"
+		if asst.Name:len() > 10 then
+		dp.Text = "Song-"..asst.Name:sub(1,11).."..."
+		else dp.Text = "Song-"..asst.Name
+		end
+		music.ID.Value = tonumber(Window.Parent.Text)
+		music:Play()
+		dp.BackgroundColor3 = Color3.new(0/255,213/255,255/255)
+			end)
+	end)
+end
+coroutine.wrap(HGAMPWM_fake_script)()
